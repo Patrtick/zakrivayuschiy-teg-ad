@@ -1,16 +1,364 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .card__image-label {
+    -webkit-text-stroke: 1px var(--text-outline);
+    text-stroke: 1px var(--text-outline);
+    text-shadow: none;
+  }
+}
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--base-font), sans-serif;
+  font-variation-settings: 'wght' 400;
+  background-image:
+    repeating-linear-gradient(to bottom, var(--surface) 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to right, var(--surface) 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content {
+  margin: 0 auto;
+  max-inline-size: 696px;
+  margin-block-start: 100px;
+}
+
+.header {
+  color: var(--primary-accent);
+  text-transform: uppercase;
+  font-family: var(--headline-font), sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 12px;
+  border: 2px solid var(--border-line);
+  background-color: var(--surface);
+}
+
+.header__title {
+  font-family: var(--headline-font), sans-serif;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header__description {
+  font-family: var(--headline-font), sans-serif;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-end: 4px;
+}
+
+.card {
+  background-color: var(--surface);
+  margin-block-end: 50px;
+  color: var(--primary-accent);
+}
+
+.card__title {
+  font-family: var(--base-font), sans-serif;
+  border: 2px solid var(--border-line);
+  font-size: 18px;
+  font-weight: var(--weight-title);
+  line-height: normal;
+  font-style: normal;
+  padding: 5px 22px 5px 8px;
+  font-variation-settings: 'wght' var(--weight-title);
+}
+
+.card__image {
+  position: relative;
+  border: 2px solid var(--border-line);
+  border-block-start: none;
+  aspect-ratio: 1 / 1;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.image-grayscale { filter: grayscale(75%); }
+.image-saturate { filter: saturate(400%); }
+.image-huerotate { filter: hue-rotate(30deg); }
+.image-invert { filter: invert(90%); }
+.image-sepia { filter: sepia(90%); }
+.image-blur { filter: blur(10px); }
+.image-huerotate-opacity { filter: hue-rotate(100deg) opacity(70%); }
+
+.card__image-label {
+  position: absolute;
+  font-family: var(--headline-font), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  top: 25px;
+  right: 25px;
+  color: var(--primary-accent);
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--text-outline);
+  text-shadow:
+    0 var(--text-outline),
+    0 1px var(--text-outline),
+    0 -1px var(--text-outline),
+    1px 0 var(--text-outline);
+}
+
+.card__content {
+  border: 2px solid var(--border-line);
+  padding: 25px;
+}
+
+.card__content-text {
+  font-family: var(--base-font), sans-serif;
+  color: var(--primary-accent);
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: var(--weight-body);
+  font-variation-settings: 'wght' var(--weight-body);
+}
+
+.card__content-text:nth-child(1) { margin-block-end: 27px; }
+.card__content-text:nth-child(2) { margin-block-end: 25px; }
+
+.card__buttons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  background-color: var(--surface);
+  cursor: pointer;
+  display: flex;
+  transition: border-color 0.3s ease;
+  justify-content: center;
+  padding: 0;
+  align-items: center;
+}
+
+.card__icon-button:focus,
+.card__icon-button:focus-visible {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--primary-accent);
+}
+
+.card__like-button {
+  border: 2px solid var(--border-line);
+  padding: 9px 17px;
+  background-color: var(--surface);
+  justify-content: center;
+  align-items: center;
+  block-size: 38px;
+  inline-size: 130px;
+  position: relative;
+}
+
+.card__like-button,
+.button-remember,
+.button-save {
+  font-family: var(--headline-font), sans-serif;
+}
+
+.card__like-button:focus-visible,
+.card__like-button:focus,
+.button-remember:focus-visible,
+.button-remember:focus,
+.button-save:focus-visible {
+  outline: none;
+}
+
+.card__like-button:hover::before {
+  width: 100%;
+}
+
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--primary-accent);
+  transition: width 0.3s ease;
+  inline-size: 100%;
+  block-size: 100%;
+  width: 0;
+}
+
+.card__like-button:hover {
+  cursor: pointer;
+}
+
+.button__text,
+.button__text-remember,
+.button-save-text {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 12.6px;
+  color: var(--blend-contrast);
+  mix-blend-mode: difference;
+}
+
+.button-remember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 20px;
+  border: 2px solid var(--border-line);
+  background-color: var(--surface);
+  cursor: pointer;
+  position: relative;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block-end: 100px;
+  padding-inline: 30px;
+}
+
+.button-remember:hover::before {
+  width: 100%;
+}
+
+.button-remember::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--primary-accent);
+  transition: width 0.3s ease;
+  inline-size: 100%;
+  block-size: 100%;
+  width: 0;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border: 2px solid var(--border-line);
+  padding: 30px;
+  background-color: var(--surface);
+  color: var(--primary-accent);
+  font-size: 14px;
+  max-inline-size: 357px;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.dialog:not([open]) {
+  display: none;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dialog__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  inline-size: 100%;
+}
+
+.dialog__flex-text {
+  line-height: 1.5;
+  white-space: normal;
+  max-inline-size: 234px;
+}
+
+.floppy,
+.floppy-dialog {
+  fill: var(--blend-contrast);
+  stroke: var(--blend-contrast);
+  mix-blend-mode: difference;
+}
+
+.floppy {
+  inline-size: 28px;
+  block-size: 28px;
+}
+
+.floppy-dialog {
+  inline-size: 39px;
+  block-size: 39px;
+  fill: var(--border-line);
+  stroke: var(--border-line);
+  mix-blend-mode: normal;
+}
+
+.button-save {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid var(--border-line);
+  background-color: var(--surface);
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.button-save::before {
+  content: '';
+  top: 0;
+  left: 0;
+  display: block;
+  transition: width 0.3s ease-in-out;
+  block-size: 100%;
+  inline-size: 100%;
+  width: 0;
+  position: absolute;
+  background-color: var(--primary-accent);
+}
+
+.button-save:hover::before {
+  width: 100%;
+}
+
+.button-remember:focus-visible,
+.card__like-button:focus-visible,
+.button-save:focus-visible {
+  box-shadow: 2px 2px 0 0px var(--border-line);
+  transition: box-shadow 0.3s ease;
+}
+
+@media screen and (width <= 375px) {
+  .card__image-label {
+    top: 25px;
+    right: 11px;
+  }
+}
+
+@media screen and (width >= 500px) {
+  .floppy {
+    block-size: 21px;
+    inline-size: 21px;
+  }
+}
+
+@media screen and (width > 375px) {
+  .button-remember {
+    flex-direction: row;
+  }
 }
