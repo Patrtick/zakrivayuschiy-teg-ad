@@ -1,7 +1,6 @@
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
   .card__image-label {
     -webkit-text-stroke: 1px var(--text-outline);
-    text-stroke: 1px var(--text-outline);
     text-shadow: none;
   }
 }
@@ -82,26 +81,32 @@
   height: 100%;
 }
 
-.image-grayscale { 
-  filter: grayscale(75%); 
+.image-grayscale {
+  filter: grayscale(75%);
 }
-.image-saturate { 
-  filter: saturate(400%); 
+
+.image-saturate {
+  filter: saturate(400%);
 }
-.image-huerotate { 
-  filter: hue-rotate(30deg); 
+
+.image-huerotate {
+  filter: hue-rotate(30deg);
 }
-.image-invert { 
-  filter: invert(90%); 
+
+.image-invert {
+  filter: invert(90%);
 }
-.image-sepia { 
+
+.image-sepia {
   filter: sepia(90%);
- }
-.image-blur { 
-  filter: blur(10px); 
 }
-.image-huerotate-opacity { 
-  filter: hue-rotate(100deg) opacity(70%); 
+
+.image-blur {
+  filter: blur(10px);
+}
+
+.image-huerotate-opacity {
+  filter: hue-rotate(100deg) opacity(70%);
 }
 
 .card__image-label {
@@ -136,11 +141,12 @@
   font-variation-settings: 'wght' var(--weight-body);
 }
 
-.card__content-text:nth-child(1) { 
-  margin-block-end: 27px; 
+.card__content-text:nth-child(1) {
+  margin-block-end: 27px;
 }
-.card__content-text:nth-child(2) { 
-  margin-block-end: 25px; 
+
+.card__content-text:nth-child(2) {
+  margin-block-end: 25px;
 }
 
 .card__buttons {
