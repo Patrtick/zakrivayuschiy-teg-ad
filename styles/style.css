@@ -10,12 +10,12 @@
   min-block-size: 100dvb;
   font-family: var(--base-font), sans-serif;
   font-variation-settings: 'wght' 400;
+  background-attachment: fixed;
+  background-size: cover;
   background-image:
-    repeating-linear-gradient(to bottom, var(--surface) 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, var(--surface) 0 2px, transparent 2px 4px),
     repeating-linear-gradient(to right, var(--surface) 0 2px, transparent 2px 4px),
     linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .content {
