@@ -94,34 +94,23 @@
   object-fit: cover;
 }
 
-.pic-gray {
-  filter: grayscale(.8);
-  will-change: filter;
-}
+/* Мои крутые фильтры*/
 
-.pic-sat {
-  filter: saturate(3);
-}
+.pic-gray { filter: grayscale(.8); }
 
-.pic-hue {
-  filter: hue-rotate(35deg);
-}
+.pic-sat { filter: saturate(3); }
 
-.pic-inv {
-  filter: invert(.8);
-}
+.pic-hue { filter: hue-rotate(35deg); }
 
-.pic-sepia {
-  filter: sepia(.85);
-}
+.pic-inv { filter: invert(.8); }
 
-.pic-blur {
-  filter: blur(15px);
-}
+.pic-sepia { filter: sepia(.85); }
 
-.pic-hardfilter {
-  filter: hue-rotate(80deg) brightness(70%) opacity(80%) blur(2px);
-}
+.pic-blur { filter: blur(15px); }
+
+.pic-hardfilter { filter: hue-rotate(80deg) brightness(70%) opacity(80%) blur(2px); }
+
+/* Конец крутых фильтров */
 
 .picture-tag {
   font-family: var(--headline-font), sans-serif;
