@@ -145,7 +145,6 @@
 .body-paragraph {
   font-family: var(--base-font), sans-serif;
   font-weight: var(--weight-body);
-  font-weight: var(--weight-body);
   color: var(--primary-accent);
   font-size: 18px;
   line-height: 21px;
