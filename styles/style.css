@@ -95,31 +95,31 @@
 /* Мои крутые фильтры*/
 
 .pic-gray {
-  filter: grayscale(.8); 
+  filter: grayscale(.8);
 }
 
 .pic-sat {
-  filter: saturate(3); 
+  filter: saturate(3);
 }
 
 .pic-hue {
-  filter: hue-rotate(35deg); 
+  filter: hue-rotate(35deg);
 }
 
 .pic-inv {
-  filter: invert(.8); 
+  filter: invert(.8);
 }
 
 .pic-sepia {
-  filter: sepia(.85); 
+  filter: sepia(.85);
 }
 
 .pic-blur {
-  filter: blur(15px); 
+  filter: blur(15px);
 }
 
 .pic-hardfilter {
-  filter: hue-rotate(80deg) brightness(70%) opacity(80%) blur(2px); 
+  filter: hue-rotate(80deg) brightness(70%) opacity(80%) blur(2px);
 }
 
 /* Конец крутых фильтров */
