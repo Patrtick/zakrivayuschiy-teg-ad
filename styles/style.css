@@ -83,31 +83,31 @@
 }
 
 .pic-gray {
-  filter: grayscale(75%);
+  filter: grayscale(80%);
 }
 
 .pic-sat {
-  filter: saturate(400%);
+  filter: saturate(300%);
 }
 
 .pic-hue {
-  filter: hue-rotate(30deg);
+  filter: hue-rotate(35deg);
 }
 
 .pic-inv {
-  filter: invert(90%);
+  filter: invert(80%);
 }
 
 .pic-sepia {
-  filter: sepia(90%);
+  filter: sepia(85%);
 }
 
 .pic-blur {
-  filter: blur(10px);
+  filter: blur(15px);
 }
 
-.pic-hueopac {
-  filter: hue-rotate(100deg) opacity(70%);
+.pic-hardfilter {
+  filter: hue-rotate(80deg) opacity(80%) blur(2px) brightness(70%);
 }
 
 .picture-tag {
