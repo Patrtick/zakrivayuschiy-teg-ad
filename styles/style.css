@@ -1,6 +1,5 @@
 @supports 
-(-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) 
-{
+(-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
   .picture-tag {
     -webkit-text-stroke: 1px var(--text-outline);
     text-shadow: none;
