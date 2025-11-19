@@ -1,16 +1,16 @@
 :root {
   --base-font: 'Inter';
   --headline-font: 'PressStart2P-Regular';
-  --surface: #d3d3d3;
-  --text-main: #000;
-  --outline-clr: #000;
-  --bg-top: #e7e7e7;
-  --bg-bottom: #1a1a1a;
-  --primary-accent: #000;
-  --blend-contrast: #fff;
-  --border-line: #000;
-  --text-outline: #fff;
   --weight-title: 700;
   --weight-body: 400;
+  --text-outline: #fff;
+  --surface: #fff;
+  --text-main: #000;
+  --outline-clr: #000;
+  --border-line: #000;
+  --primary-accent: #000;
+  --blend-contrast: #fff;
   --highlight-red: red;
+  --bg-top: #fff;
+  --bg-bottom: #000;
 }
