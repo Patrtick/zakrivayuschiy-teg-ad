@@ -2,7 +2,6 @@
   .picture-tag {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-outline);
-    isolation: isolate;
   }
 }
 
@@ -66,7 +65,6 @@
   margin-block-end: 50px;
   background-color: var(--surface);
   color: var(--primary-accent);
-  isolation: isolate;
 }
 
 .card-heading {
@@ -96,19 +94,33 @@
 
 /* Мои крутые фильтры*/
 
-.pic-gray { filter: grayscale(.8); }
+.pic-gray { 
+  filter: grayscale(.8); 
+}
 
-.pic-sat { filter: saturate(3); }
+.pic-sat { 
+  filter: saturate(3); 
+}
 
-.pic-hue { filter: hue-rotate(35deg); }
+.pic-hue { 
+  filter: hue-rotate(35deg); 
+}
 
-.pic-inv { filter: invert(.8); }
+.pic-inv { 
+  filter: invert(.8); 
+}
 
-.pic-sepia { filter: sepia(.85); }
+.pic-sepia { 
+  filter: sepia(.85); 
+}
 
-.pic-blur { filter: blur(15px); }
+.pic-blur { 
+  filter: blur(15px); 
+}
 
-.pic-hardfilter { filter: hue-rotate(80deg) brightness(70%) opacity(80%) blur(2px); }
+.pic-hardfilter { 
+  filter: hue-rotate(80deg) brightness(70%) opacity(80%) blur(2px); 
+}
 
 /* Конец крутых фильтров */
 
@@ -122,7 +134,6 @@
   color: var(--primary-accent);
   opacity: .5;
   mix-blend-mode: hard-light;
-  isolation: isolate;
 }
 
 .card-body {
@@ -279,7 +290,6 @@
   text-transform: uppercase;
   line-height: 1.5;
   align-items: center;
-  isolation: isolate;
 }
 
 .popup-dialog:not([open]) {
@@ -308,8 +318,6 @@
 .floppy-dialog {
   fill: var(--blend-contrast);
   stroke: var(--blend-contrast);
-  mix-blend-mode: difference;
-  isolation: isolate;
 }
 
 .floppy-icon {
