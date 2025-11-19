@@ -189,7 +189,7 @@
 
 .card__like-button,
 .button-remember,
-.save-confirm {
+.button-save {
   font-family: var(--headline-font), sans-serif;
 }
 
@@ -197,7 +197,7 @@
 .card__like-button:focus,
 .button-remember:focus-visible,
 .button-remember:focus,
-.save-confirm:focus-visible {
+.button-save:focus-visible {
   outline: none;
 }
 
@@ -328,7 +328,7 @@
   mix-blend-mode: normal;
 }
 
-.save-confirm {
+.button-save {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,7 +343,7 @@
   text-transform: uppercase;
 }
 
-.save-confirm::before {
+.button-save::before {
   content: '';
   top: 0;
   left: 0;
@@ -356,13 +356,13 @@
   background-color: var(--primary-accent);
 }
 
-.save-confirm:hover::before {
+.button-save:hover::before {
   width: 100%;
 }
 
 .button-remember:focus-visible,
 .card__like-button:focus-visible,
-.save-confirm:focus-visible {
+.button-save:focus-visible {
   box-shadow: 2px 2px 0 0px var(--border-line);
   transition: box-shadow 0.3s ease;
 }
