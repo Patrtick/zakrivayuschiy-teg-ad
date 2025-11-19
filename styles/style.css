@@ -121,11 +121,6 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 1px var(--text-outline);
-  text-shadow:
-    0 var(--text-outline),
-    0 1px var(--text-outline),
-    0 -1px var(--text-outline),
-    1px 0 var(--text-outline);
 }
 
 .card-body {
